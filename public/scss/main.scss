@@ -1,4 +1,6 @@
+@import "../../node_modules/bourbon/app/assets/stylesheets/bourbon";
 @import 'variables';
+@import 'overrides';
 body,
 html {
     font-family: 'Roboto', sans-serif !important;
@@ -8,9 +10,9 @@ html {
 
 .navbar.navbar-default {
     margin-bottom: 0;
-    background-color: $crimson !important;
+    background-color: $bg-color !important;
     border: none;
-    border-bottom: solid 1px darken($crimson, 5%);
+    border-bottom: solid 1px darken($bg-color, 5%);
     border-radius: 0;
     a {
         color: white !important;
@@ -19,34 +21,46 @@ html {
 }
 
 .jumbotron {
-    background-color: $crimson !important;
-    //    @include background-image(linear-gradient(rgba(0, 0, 0, 0.50), darken(#333, 10%)), url('../img/bitcoin-freelance.jpg'));
-
+    background-color: rgba(0, 0, 0, 0.85)!important;
+    @include background-image(linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('../img/codebg.png'));
     color: white !important;
     margin-bottom: 0 !important;
-    padding: 100px 0 !important;
+    padding: 150px 0 !important;
     h1 {
-        font-size: 50px !important;
+        font-size: 60px !important;
         font-weight: bold;
         text-transform: uppercase;
     }
 }
 
 .about {
-    padding: 100px 100px;
-    background-color: darken($light-grey, 5%);
+    padding: 100px 100px 80px 100px;
+    background-color: $bg-color !important;
     color: white;
     font-weight: bold;
     font-size: 21px;
+    .icons {
+        padding-top: 40px;
+        i {
+            @include transition(all 0.2s ease-in-out);
+            font-size: 50px;
+            padding: 0 20px 0 20px;
+            &:hover {
+                color: darken(white, 10%);
+                cursor: pointer;
+            }
+        }
+    }
 }
 
 .get-in-touch {
-    padding-top: 90px;
+    padding: 80px;
+    padding-bottom: 120px;
     .big-icon {
         font-size: 100px;
     }
     h4 {
-      padding-top: 10px;
+        padding-top: 10px;
     }
     p {
         padding: 0 200px;
@@ -54,4 +68,35 @@ html {
         line-height: 200%;
         font-size: 18px;
     }
+    .get-in-touch-button {
+        margin-top: 50px;
+    }
+}
+
+.richard-macarthy {
+    padding: 30px;
+    padding-bottom: 0px;
+    background-color: $bg-color;
+    color: white;
+    * {
+        transform: translateY(-40px);
+    }
+    .me {
+        border-radius: 50%;
+        height: 90px;
+    }
+    p {
+      padding-top: 50px;
+      font-size: 18px;
+    }
+}
+
+.portfolio {
+  padding: 80px;
+}
+
+footer {
+    height: 200px;
+    padding: 90px;
+    background-color: $bg-color;
 }

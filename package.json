@@ -22,5 +22,8 @@
     "webpack-dev-server": "^1.14.1"
   },
   "author": "rjmacarthy <https://www.cryptogrind.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "node-bourbon": "^4.2.8"
+  }
 }
