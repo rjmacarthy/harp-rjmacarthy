@@ -1,0 +1,57 @@
+@import 'variables';
+body,
+html {
+    font-family: 'Roboto', sans-serif !important;
+    text-align: center;
+    background: $solitude !important;
+}
+
+.navbar.navbar-default {
+    margin-bottom: 0;
+    background-color: $crimson !important;
+    border: none;
+    border-bottom: solid 1px darken($crimson, 5%);
+    border-radius: 0;
+    a {
+        color: white !important;
+        font-weight: bold;
+    }
+}
+
+.jumbotron {
+    background-color: $crimson !important;
+    //    @include background-image(linear-gradient(rgba(0, 0, 0, 0.50), darken(#333, 10%)), url('../img/bitcoin-freelance.jpg'));
+
+    color: white !important;
+    margin-bottom: 0 !important;
+    padding: 100px 0 !important;
+    h1 {
+        font-size: 50px !important;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}
+
+.about {
+    padding: 100px 100px;
+    background-color: darken($light-grey, 5%);
+    color: white;
+    font-weight: bold;
+    font-size: 21px;
+}
+
+.get-in-touch {
+    padding-top: 90px;
+    .big-icon {
+        font-size: 100px;
+    }
+    h4 {
+      padding-top: 10px;
+    }
+    p {
+        padding: 0 200px;
+        margin-top: 40px;
+        line-height: 200%;
+        font-size: 18px;
+    }
+}
