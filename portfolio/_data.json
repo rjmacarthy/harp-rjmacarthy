@@ -1,0 +1,41 @@
+[{
+    "title": "cryptogrind",
+    "description": "Owner and creator of Bitcoin integrated freelance marketplace cryptogrind built using MEAN stack.",
+    "img" : "public/img/cryptogrind.png",
+    "url" : "https://www.cryptogrind.com/",
+    "Skills": [
+        "Node.js",
+        "Express.js",
+        "Mongodb",
+        "Angular.js",
+        "SASS",
+        "Bootstrap"
+    ]
+}, {
+    "title": " Sheffield City Region Growth Hub",
+    "description": "Full backend CMS integration using Node.js with Sails.js framework.",
+    "img" : "public/img/cms.png",
+    "url" : "http://www.scrgrowthhub.co.uk/",
+    "Skills": [
+        "Node.js",
+        "Sails.js",
+        "EJS",
+        "Mongodb",
+        "LESS",
+        "Knockout.js",
+        "Bootstrap"
+    ]
+}, {
+    "title": "Node Patterns Books",
+    "description": "Harp.js built web app for node pattern books.",
+    "img" : "public/img/npb.png",
+    "url" : "http://nodepatternsbooks.com/",
+    "Skills": [
+        "Node.js",
+        "Harp.js",
+        "Jade",
+        "Stylus",
+        "Bourbon",
+        "NEAT"
+    ]
+}]

@@ -1,4 +1,25 @@
 .col-xs-12
-	img(src="public/img/me.jpg" height="150").me
-	h2 Richard Macarthy
-	p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  
+  img(src="public/img/me.jpg" height="150").me
+  h2 Richard Macarthy
+  #carousel-example-generic.carousel.slide(data-ride='carousel')
+    .carousel-inner(role='listbox')
+      .item.active
+          p.review "Fantastic work. Richard provided quality work in a timely manner. He was also able to adapt to our changing requirements effectively. We will likely hire him again for similar projects."
+      .item
+          p.review "Richard did a superb job translating the designs into HTML and CSS. He was quick and did it almost in one go, always extremely professional."
+      .item
+          p.review "Richard is a excellent developer and was a pleasure to work with. He maintained good communication throughout the project, produced high quality work and helped us to successfully meet a tight deadline with our client. I would recommend Richard to anyone."
+      .item
+          p.review "Strong developer, quick to understand, requires little direction, all in all, A+"
+      .item
+          p.review "Richard was able to identify a few problems left behind by previous coders and quickly fixed the bugs to my complete satisfaction. I would have no hesitation in hiring Richard again and recommending him to others"
+    a.left.carousel-control(href='#carousel-example-generic', role='button', data-slide='prev')
+      span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+    a.right.carousel-control(href='#carousel-example-generic', role='button', data-slide='next')
+      span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+    ol.carousel-indicators
+      li.active(data-target='#carousel-example-generic', data-slide-to='0')
+      li(data-target='#carousel-example-generic', data-slide-to='1')
+      li(data-target='#carousel-example-generic', data-slide-to='2')
+      li(data-target='#carousel-example-generic', data-slide-to='3')
+      li(data-target='#carousel-example-generic', data-slide-to='4')

@@ -22,48 +22,63 @@ html {
 
 .jumbotron {
     background-color: rgba(0, 0, 0, 0.85)!important;
+    background-attachment: fixed;
+    background-size: cover;
     @include background-image(linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('../img/codebg.png'));
+    //background-position: 50%;
     color: white !important;
     margin-bottom: 0 !important;
     padding: 150px 0 !important;
     h1 {
-        font-size: 60px !important;
+        font-size: 5.9vw;
         font-weight: bold;
         text-transform: uppercase;
     }
 }
 
 .about {
-    padding: 100px 100px 80px 100px;
+    padding: 100px 0px 80px 0px;
     background-color: $bg-color !important;
     color: white;
     font-weight: bold;
-    font-size: 21px;
+    p {
+        padding: 0 30px;
+        font-size: 21px;
+    }
+    
     .icons {
         padding-top: 40px;
-        i {
-            @include transition(all 0.2s ease-in-out);
-            font-size: 50px;
-            padding: 0 20px 0 20px;
+        a {
+            color: darken(white, 10%);
+            display: inline-block;
+            text-decoration: none;
             &:hover {
-                color: darken(white, 10%);
+                color: darken(white, 20%) !important;
                 cursor: pointer;
+            }
+            i {
+                @include transition(all 0.2s ease-in-out);
+                font-size: 36px;
+                font-size: 3vw;
+                padding: 0 20px 0 20px;
             }
         }
     }
 }
 
 .get-in-touch {
-    padding: 80px;
     padding-bottom: 120px;
     .big-icon {
         font-size: 100px;
+    }
+    img {
+        margin-top: 80px;
     }
     h4 {
         padding-top: 10px;
     }
     p {
-        padding: 0 200px;
+        padding: 20px;
         margin-top: 40px;
         line-height: 200%;
         font-size: 18px;
@@ -76,7 +91,11 @@ html {
 .richard-macarthy {
     padding: 30px;
     padding-bottom: 0px;
-    background-color: $bg-color;
+    @include background-image(linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('../img/other.jpg'));
+    background-size: cover;
+    background-position: 50% -100px;
+    background-attachment: fixed;
+    height: 450px;
     color: white;
     * {
         transform: translateY(-40px);
@@ -86,17 +105,119 @@ html {
         height: 90px;
     }
     p {
-      padding-top: 50px;
-      font-size: 18px;
+        padding-top: 50px;
+        font-size: 18px;
+    }
+    #carousel-example-generic {
+        margin-top: 130px;
+        .carousel-caption {
+            color: white;
+        }
+        .carousel-indicators {
+            transform: translateY(80px);
+            li {
+                height: 20px;
+                width: 20px;
+                margin: 0 5px 0 5px;
+            }
+        }
+        .carousel-control.left,
+        .carousel-control.right {
+            background-image: none !important;
+        }
+        .review {
+            padding-left: 200px;
+            padding-right: 200px;
+            height: 90px;
+        }
     }
 }
 
 .portfolio {
-  padding: 80px;
+    padding: 70px;
+    .portfolio-items {
+        margin-top: 80px;
+    }
+    .item-cover {
+        opacity: 0;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.85)!important;
+        height: 296px;
+        width: calc(100% - 31px);
+        position: absolute;
+        top: 0;
+        color: white;
+        left: 16px;
+        @include transition(all 0.2s ease-in-out);
+        .description {
+            height: 90px;
+        }
+    }
+    .label.label-success {
+        margin: 0 5px 5px 5px !important;
+        float: left;
+    }
+    .portfolio-item {
+        border: solid 1px #ddd;
+        padding: 20px;
+        background-color: white;
+        padding: 5px;
+        height: 297px;
+        background-size: cover;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        &:hover {
+            cursor: pointer;
+            .item-cover {
+                opacity: 1;
+            }
+        }
+    }
 }
 
 footer {
-    height: 200px;
+    height: 400px;
     padding: 90px;
-    background-color: $bg-color;
+    @include background-image(linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('../img/3.jpg'));
+    background-size: cover;
+    background-position: 50% -100px;
+    background-attachment: fixed;
 }
+
+// MOBILE
+
+/*==========  Non-Mobile First Method  ==========*/
+
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (max-width: 1200px) {}
+
+
+/* Medium Devices, Desktops */
+
+@media only screen and (max-width: 992px) {}
+
+
+/* Small Devices, Tablets */
+
+@media only screen and (max-width: 768px) {
+    .review {
+        padding-left: 50px !important;
+        padding-right: 50px !important;
+        height: 90px !important;
+        font-size: 13px !important;
+    }
+}
+
+
+/* Extra Small Devices, Phones */
+
+@media only screen and (max-width: 480px) {}
+
+
+/* Custom, iPhone Retina */
+
+@media only screen and (max-width: 320px) {}

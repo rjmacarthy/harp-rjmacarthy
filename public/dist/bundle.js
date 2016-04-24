@@ -51,9 +51,19 @@
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	/* WEBPACK VAR INJECTION */(function($) {'use strict';
 	
 	__webpack_require__(2);
+	
+	$(document).ready(function () {
+	    $(window).scroll(function () {
+	        var x = $(this).scrollTop();
+	        $('.jumbotron').css('background-position', '0% ' + parseInt(-x / 5) + 'px');
+	        $('.richard-macarthy').css('background-position', '0% ' + parseInt(-x / 5) + 'px');
+	        $('footer').css('background-position', '0% ' + parseInt(-x / 5) + 'px');
+	    });
+	});
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ },
 /* 2 */
