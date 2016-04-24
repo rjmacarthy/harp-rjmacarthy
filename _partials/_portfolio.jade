@@ -1,0 +1,18 @@
+- var items = public.portfolio._data
+
+.col-xs-12
+	h3 Some Recent Work
+.col-xs-12.portfolio-items
+	for item in items
+		.col-sm-4.col-xs-12
+			a(href="#{item.url}" target="_blank")
+				.portfolio-item(style="background-image:url(#{item.img})")
+					.item-cover
+						h4 #{item.title}
+						p.description #{item.description}
+						
+			.text-left
+				for skill in item.Skills
+					span.label.label-success 
+						i.icon.icon-checkmark 
+						span #{skill}
